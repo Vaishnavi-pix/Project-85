@@ -43,7 +43,7 @@ function uploadcar2(){
 
 window.addEventListener("keydown",mykeydown);
 function mykeydown(e){
-    keyPressed=e.keycode;
+    keyPressed=e.keyCode;
     console.log(keyPressed);
     if(keyPressed=="38"){
     car1_up();
@@ -79,7 +79,11 @@ function mykeydown(e){
     }
     if(car1_x>700){
         console.log("car1 won!");
-        document.getElementById("ganeStatus").innerHTML="Car 1 Won!";
+        document.getElementById("gameStatus").innerHTML="Car 1 Won!";
+    }
+    if(car2_x>700){
+        console.log("car2 won!");
+        document.getElementById("gameStatus").innerHTML="Car 2 Won!";
     }
 }
 function car1_up(){
